@@ -1,6 +1,24 @@
 #include "pch.h"
 #include "Solution.h"
-TEST(TestCaseName, TestName) {
+/*
+TEST(InsertionTest, Test1) {
+	Solution s;
+	std::vector<int> input = { 2,1,5,3 };
+	auto node = s.constructMaximumBinaryTree(input);
+	node = s.insertIntoMaxTree(node, 4);
+	EXPECT_TRUE(node->right->right->val == 3);
+}*/
+
+TEST(InsertionTest, Test2) {
+	Solution s;
+	std::vector<int> input = { 4,1,3,2 };
+	auto node = s.constructMaximumBinaryTree(input);
+	node = s.insertIntoMaxTree(node, 5);
+	EXPECT_TRUE(node->val==5);
+}
+
+
+TEST(ConstructionTest, Test1) {
 	Solution s;
 	std::vector<int> input = { 3,2,1,6,0,5 };
 	auto node=s.constructMaximumBinaryTree(input);
